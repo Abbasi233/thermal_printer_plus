@@ -1,11 +1,18 @@
-#import "ThermalPrinter.h"
+#import "./include/thermal_printer_plus/ThermalPrinterPlugin.h"
 #import "ConnecterManager.h"
+
+#define NAMESPACE @"thermal_printer"
+
+@interface BluetoothPrintStreamHandler : NSObject<FlutterStreamHandler>
+@property FlutterEventSink sink;
+@end
 
 @interface ThermalPrinterPlugin ()
 @property(nonatomic, retain) NSObject<FlutterPluginRegistrar> *registrar;
 @property(nonatomic, retain) FlutterMethodChannel *channel;
 @property(nonatomic, retain) BluetoothPrintStreamHandler *stateStreamHandler;
 @property(nonatomic) NSMutableDictionary *scannedPeripherals;
+@property(nonatomic, copy) ConnectDeviceState state;
 @end
 
 @implementation ThermalPrinterPlugin

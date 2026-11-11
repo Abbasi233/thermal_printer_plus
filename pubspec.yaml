@@ -1,6 +1,6 @@
 name: thermal_printer_plus
 description: A flutter plugin that prints esc commands to printers in different platforms such as android, ios, windows and different interfaces Bluetooth and BLE, TCP and USB
-version: 1.0.12
+version: 1.0.14
 homepage: https://github.com/nasibudesign/thermal_printer/
 
 # This package supports all platforms listed below.
@@ -10,8 +10,8 @@ platforms:
   windows:
 
 environment:
-  sdk: '>=3.4.1 <4.0.0'
-  flutter: ">=1.20.0"
+  sdk: ^3.11.0
+  flutter: ">=3.41.0"
 
 dependencies:
   flutter:
